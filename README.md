@@ -32,3 +32,31 @@ talabalar
 talaba
 talabalaridan
 ```
+RegexOptions parametrlari
+Regex sinfida ob'ektni dastlabki ishga tushirishni amalga oshirish imkonini beruvchi bir qator konstruktorlar mavjud. Konstruktorlarning ikkita versiyasi o'zlarining parametrlaridan biri sifatida RegexOptions ro'yxatini oladi. Ushbu ro'yxat tomonidan qabul qilingan ba'zi qiymatlar:
+Compiled: Ushbu qiymatni o'rnatish muntazam ifodani kompilyatsiya qiladi, bu esa tezroq bajarilishiga olib keladi.
+CultureInvariant: Ushbu qiymatni o'rnatish mintaqaviy farqlarni e'tiborsiz qoldiradi
+IgnoreCase: Ushbu qiymatni o'rnatish katta harflarni e'tiborsiz qoldiradi
+IgnorePatternWhitespace: satrdan boʻshliqlarni olib tashlaydi va # belgisi bilan boshlangan izohlarga ruxsat beradi
+Multiline: matnni ko'p qatorli rejimda ko'rish kerakligini bildiradi. Ushbu rejimda "^" va "$" belgilari mos ravishda butun matnning boshi va oxiriga emas, balki har qanday satrning boshi va oxiriga to'g'ri keladi.
+RightToLeft: qatorni o‘ngdan chapga o‘qishni tayinlaydi
+Singleline: bu rejimda "." belgisi har qanday belgiga, jumladan, keyingi qatorga olib boradigan "\n" ketma-ketligiga mos keladi
+Misol uchun,
+Regex regex = new Regex(@"talaba(\w*)", RegexOptions.IgnoreCase);
+Agar kerak bo'lsa, siz bir nechta parametrlarni o'rnatishingiz mumkin:
+Regex regex = new Regex(@"talaba(\w*)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+Regulyar ifoda sintaksisi
+Regulyar ifoda sintaksisining ba'zi elementlarini qisqacha ko'rib chiqamiz:
+^: Moslik satr boshida boshlanishi kerak (masalan, @"^sa\w*" ifodasi "salom dunyo" qatoridagi "salom" so'ziga mos keladi)
+$: satr oxiri (masalan, @"\w*yo$" "salom dunyo" qatoridagi "dunyo" so'ziga mos keladi, chunki "yo" qismi eng oxirida joylashgan)
+.: nuqta belgisi istalgan bitta belgiga mos keladi (masalan, "m.s" iborasi "mis", "mas" yoki "mos" so'ziga mos keladi)
+*: oldingi belgi 0 yoki undan ortiq marta takrorlanadi
++: oldingi belgi 1 yoki undan ortiq marta takrorlanadi
+?: oldingi belgi 0 yoki 1 marta takrorlanadi
+\s: har qanday bo'shliq belgisiga mos keladi
+\S: bo'sh joy bo'lmagan har qanday belgiga mos keladi
+\w: har qanday alfavit belgiga mos keladi
+\W: har qanday alfavit bo'lmagan belgilarga mos keladi
+\d: har qanday kasrli sonli mos keladi
+\D : o'nlik raqam bo'lmagan har qanday belgiga mos keladi
+
