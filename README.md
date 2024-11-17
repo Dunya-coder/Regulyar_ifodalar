@@ -47,17 +47,17 @@ Agar kerak bo'lsa, siz bir nechta parametrlarni o'rnatishingiz mumkin:
 Regex regex = new Regex(@"talaba(\w*)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 Regulyar ifoda sintaksisi
 Regulyar ifoda sintaksisining ba'zi elementlarini qisqacha ko'rib chiqamiz:
-+
-^: Moslik satr boshida boshlanishi kerak (masalan, @"^sa\w*" ifodasi "salom dunyo" qatoridagi "salom" so'ziga mos keladi)
-$: satr oxiri (masalan, @"\w*yo$" "salom dunyo" qatoridagi "dunyo" so'ziga mos keladi, chunki "yo" qismi eng oxirida joylashgan)
-.: nuqta belgisi istalgan bitta belgiga mos keladi (masalan, "m.s" iborasi "mis", "mas" yoki "mos" so'ziga mos keladi)
-*: oldingi belgi 0 yoki undan ortiq marta takrorlanadi
-+: oldingi belgi 1 yoki undan ortiq marta takrorlanadi
-?: oldingi belgi 0 yoki 1 marta takrorlanadi
-\s: har qanday bo'shliq belgisiga mos keladi
-\S: bo'sh joy bo'lmagan har qanday belgiga mos keladi
-\w: har qanday alfavit belgiga mos keladi
-\W: har qanday alfavit bo'lmagan belgilarga mos keladi
-\d: har qanday kasrli sonli mos keladi
-\D : o'nlik raqam bo'lmagan har qanday belgiga mos keladi
+
+* ^: Moslik satr boshida boshlanishi kerak (masalan, @"^sa\w*" ifodasi "salom dunyo" qatoridagi "salom" so'ziga mos keladi)
+* $: satr oxiri (masalan, @"\w*yo$" "salom dunyo" qatoridagi "dunyo" so'ziga mos keladi, chunki "yo" qismi eng oxirida joylashgan)
+* .: nuqta belgisi istalgan bitta belgiga mos keladi (masalan, "m.s" iborasi "mis", "mas" yoki "mos" so'ziga mos keladi)
+* *: oldingi belgi 0 yoki undan ortiq marta takrorlanadi
+* +: oldingi belgi 1 yoki undan ortiq marta takrorlanadi
+* ?: oldingi belgi 0 yoki 1 marta takrorlanadi
+* \s: har qanday bo'shliq belgisiga mos keladi
+* \S: bo'sh joy bo'lmagan har qanday belgiga mos keladi
+* \w: har qanday alfavit belgiga mos keladi
+* \W: har qanday alfavit bo'lmagan belgilarga mos keladi
+* \d: har qanday kasrli sonli mos keladi
+* \D : o'nlik raqam bo'lmagan har qanday belgiga mos keladi
 
