@@ -47,6 +47,7 @@ Agar kerak bo'lsa, siz bir nechta parametrlarni o'rnatishingiz mumkin:
 Regex regex = new Regex(@"talaba(\w*)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 Regulyar ifoda sintaksisi
 Regulyar ifoda sintaksisining ba'zi elementlarini qisqacha ko'rib chiqamiz:
++
 ^: Moslik satr boshida boshlanishi kerak (masalan, @"^sa\w*" ifodasi "salom dunyo" qatoridagi "salom" so'ziga mos keladi)
 $: satr oxiri (masalan, @"\w*yo$" "salom dunyo" qatoridagi "dunyo" so'ziga mos keladi, chunki "yo" qismi eng oxirida joylashgan)
 .: nuqta belgisi istalgan bitta belgiga mos keladi (masalan, "m.s" iborasi "mis", "mas" yoki "mos" so'ziga mos keladi)
